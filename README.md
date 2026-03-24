@@ -1,13 +1,9 @@
 # PRIMAL-UNeXt
-
-Reference implementation package for the PRIMAL-UNeXt medical image segmentation model used in manuscript experiments.
-
-## Repository goals
-
-- Provide a clean, reusable model package separated from notebook-only experimentation.
-- Keep architecture components modular (`layers`, `model`, `metrics`, `utils`) with paper-aligned blocks.
-- Offer a one-command validation run to confirm model wiring locally.
-- Support reviewer-period code sharing with privacy-aware defaults.
+- Author: Dr. Francis Jesmar P. Montalbo
+- Affiliation: Batangas State University
+- Department: Center for Artificial Intelligence and Smart Technologies (CAIST) and College of Informatics and Computing Sciences (CICS)
+- Email: francismontalbo@ieee.org, francisjesmar.montalbo@g.batstate-u.edu.ph
+- Website: https://francismontalbo.github.io
 
 ## Project layout
 
@@ -62,19 +58,9 @@ The notebook workflow expects a preprocessed folder structure (`prepared_liver_d
 For official raw datasets commonly used for this task, use:
 
 - **LiTS (Liver Tumor Segmentation Challenge)**: https://competitions.codalab.org/competitions/17094
-- **MSD Task03 Liver**: http://medicaldecathlon.com/
-- **3D-IRCADb-01**: https://www.ircad.fr/research/3d-ircadb-01/
+- **3D-IRCADb-01**: https://www.ircad.fr/research/data-sets/liver-segmentation-3d-ircadb-01/
 
 After download, convert to your standardized training layout (`images`, `liver_masks`, `tumor_masks`, `multi_class_masks`) before training.
-
-## Reviewer-period privacy checklist
-
-Before sharing artifacts generated from `PRIMAL_UNeXt.ipynb`, ensure:
-
-1. Notebook outputs are cleared (plots, logs, local paths, timing traces).
-2. Dataset paths do not expose private local directory structures.
-3. Any exported tables include only aggregate metrics.
-4. Saved checkpoints and logs are reviewed for embedded metadata.
 
 ## Notes
 
