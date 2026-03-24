@@ -27,7 +27,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--channels", type=int, default=3, help="Input channels")
     parser.add_argument("--num-classes", type=int, default=1, help="Output segmentation classes")
     parser.add_argument("--batch-size", type=int, default=4, help="Synthetic batch size")
-    parser.add_argument("--base-filters", type=int, default=16, help="Base filter width")
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
     return parser.parse_args()
 
@@ -45,9 +44,9 @@ def main() -> None:
     )
 
     model = build_primal_unext(
-        input_shape=config.input_shape,
+        image_size=args.image_size,
+        in_channels=args.channels,
         num_classes=config.num_classes,
-        base_filters=args.base_filters,
     )
 
     if config.num_classes == 1:

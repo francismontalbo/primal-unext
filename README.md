@@ -5,7 +5,7 @@ Reference implementation package for the PRIMAL-UNeXt medical image segmentation
 ## Repository goals
 
 - Provide a clean, reusable model package separated from notebook-only experimentation.
-- Keep architecture components modular (`layers`, `model`, `metrics`, `utils`) and class-oriented.
+- Keep architecture components modular (`layers`, `model`, `metrics`, `utils`) with paper-aligned blocks.
 - Offer a one-command validation run to confirm model wiring locally.
 - Support reviewer-period code sharing with privacy-aware defaults.
 
@@ -35,7 +35,7 @@ pip install -r requirements.txt
 ## Quick validation
 
 ```bash
-python main.py --image-size 128 --channels 3 --num-classes 1 --base-filters 16
+python main.py --image-size 128 --channels 3 --num-classes 1
 ```
 
 This command will:
@@ -50,9 +50,9 @@ This command will:
 from primal_unext import build_primal_unext
 
 model = build_primal_unext(
-    input_shape=(128, 128, 3),
+    image_size=128,
+    in_channels=3,
     num_classes=1,
-    base_filters=16,
 )
 ```
 
