@@ -57,6 +57,8 @@ model = build_primal_unext(
 The notebook workflow expects a preprocessed folder structure (`prepared_liver_dataset/...`).
 For official raw datasets commonly used for this task, use:
 
+**Note: The LiTS 2017 dataset had the dataset partitioned accordingly based on the manuscript and did not use the hidden test sets from Coda, similar to the other previously published research papers.**
+
 - **LiTS (Liver Tumor Segmentation Challenge)**: https://competitions.codalab.org/competitions/17094
 - **3D-IRCADb-01**: https://www.ircad.fr/research/data-sets/liver-segmentation-3d-ircadb-01/
 
