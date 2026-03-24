@@ -2,13 +2,6 @@
 
 Reference implementation package for the PRIMAL-UNeXt medical image segmentation model used in manuscript experiments.
 
-## Repository goals
-
-- Provide a clean, reusable model package separated from notebook-only experimentation.
-- Keep architecture components modular (`layers`, `model`, `metrics`, `utils`).
-- Offer a one-command smoke test to validate installation and model wiring.
-- Support reviewer-period code sharing with privacy-aware defaults.
-
 ## Project layout
 
 ```text
@@ -54,17 +47,6 @@ model = build_primal_unext(
     base_filters=32,
 )
 ```
-
-## Reviewer-period privacy checklist
-
-Before sharing artifacts generated from `PRIMAL_UNeXt.ipynb`, ensure:
-
-1. Notebook outputs are cleared (plots, logs, local paths, timing traces).
-2. Dataset paths do not expose private local directory structures.
-3. Any exported results tables include only aggregate metrics.
-4. Saved checkpoints and logs are reviewed for embedded metadata.
-
-A safe export workflow is to keep the notebook for reproducibility while using the package modules for distributable code.
 
 ## Notes
 
